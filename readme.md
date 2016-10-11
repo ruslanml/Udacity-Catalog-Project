@@ -1,6 +1,6 @@
 #Udacity Catalog Project
 
-This is a simple catalog app built with Python, Flask and SQLAlchemy. The app supports user authentication and authorization using oAuth 2.0 and Facebook Login API.
+This is a simple catalog app built with Python, Flask and SQLAlchemy. The app supports user authentication and authorization using OAuth 2.0 and Facebook Login API.
 Logged in users can add categories and items, as well as edit, delete categories and items that they have created. Users who are not logged in can view the contents of the catalog but cannot make changes.
 
 ####Installation
