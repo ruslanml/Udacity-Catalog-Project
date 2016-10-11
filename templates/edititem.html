@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="container" style="background-color:#FFF;">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Edit Item</h2>
+			<form action="#" method = "post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type ="text" maxlength="100" class="form-control" name="name" value="{{item.name }}">
+
+					<label for="description">Description:</label>
+					<textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+
+					<label for="price">Price:</label>
+					<div class="input-group">
+						<input type ="text" maxlength="10" class="form-control" name="price" value="{{item.price}}">
+					</div>
+					<label for="course">Category:</label>
+					<select class="form-control" name="category">
+						{% for category in categories %}
+						<option>{{ category.name }}</option>
+						{% endfor %}
+					</select>
+					<br>
+					<button type="submit" class="btn btn-default" id="submit" type="submit">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
+				</div>
+			</form>
+			<a href = '{{url_for('showItems', category_id= item.category.id)}}'>Cancel</a>
+		</div>
+		</div>
+	</div>
+{% endblock %}
